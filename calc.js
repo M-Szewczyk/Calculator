@@ -1,6 +1,6 @@
 let previousVal = '';
-let currentVal = ''
-let operator = ''
+let currentVal = '';
+let operator = '';
 
 let clearBtn = document.querySelector("#clearButton");
 let deleteBtn = document.querySelector("#deleteButton");
@@ -18,11 +18,16 @@ numbers.forEach((number) => number.addEventListener('click', function(e){
     currentScreen.textContent = currentVal;
 }))
 
-operators.forEach((op) => op.addEventListener('click', function(e){
-    handleOperator(e.target.textContent);
-    previousScreen.textContent = previousVal + " " + operator;
-    currentScreen.textContent = "";
-}))
+
+
+decimalBtn.addEventListener('click', function(){
+    addDecimal();
+});
+
+deleteBtn.addEventListener('click', function(){
+    currentScreen.textContent = currentScreen.textContent.toString().slice(0,-1);
+    currentVal = currentScreen.textContent;
+})
 
 clearBtn.addEventListener('click', () => {
     previousVal = "";
@@ -35,7 +40,8 @@ clearBtn.addEventListener('click', () => {
 
 equalsBtn.addEventListener('click', function(){
     if(currentVal != '' && previousVal != ''){
-        operate();
+        previousVal = operate();
+        console.log(previousVal);
         previousScreen.textContent = "";
         if(previousVal.length <=5){
             currentScreen.textContent = previousVal;
@@ -43,30 +49,49 @@ equalsBtn.addEventListener('click', function(){
         else {
             currentScreen.textContent = previousVal.slice(0,5)+ "...";
         }
-    }
+        currentVal = 0;
+    }    
+});
 
-decimalBtn.addEventListener('click', function(){
-    addDecimal();
-    console.log('test');
-});
-    
-});
 function handleNumber(num){
     if (currentVal.length <=5){
         currentVal += num;
     }
 }
 
+operators.forEach((op) => op.addEventListener('click', function(e){
+    handleOperator(e.target.textContent);
+    previousScreen.textContent = previousVal + " " + operator;
+    currentScreen.textContent = "";
+}))
+
 function handleOperator(op){
-    operator = op;
-    previousVal = currentVal;
-    currentVal = '';
+    if(operator==''){
+        operator = op;
+        previousVal = currentVal;
+        currentVal = '';
+    }
+
+    else {
+        console.log(previousVal)
+        console.log(currentVal);
+        previousVal = operate();
+        operator = op;
+        currentVal = '';
+    }
+
+    
 }
 
 function operate(){
     previousVal = Number(previousVal);
     currentVal = Number(currentVal);
-    
+    if(operator=='/'&&currentVal==0){
+        alert("Don't divide by 0 dummy!");
+        previousVal = previousVal.toString();
+        currentVal = currentVal.toString();
+        return;
+    }
     if(operator == "+"){
         previousVal += currentVal;
     }
@@ -82,9 +107,9 @@ function operate(){
 
     previousVal = roundNumber(previousVal);
     currentVal = previousVal;
-    console.log(previousVal);
     previousVal = previousVal.toString();
     currentVal = currentVal.toString();
+    return previousVal;
 }
 
 function roundNumber(num){
