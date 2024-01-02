@@ -1,0 +1,119 @@
+#calculator {
+    height: 800px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, lightblue, lightgreen);
+    border-radius: 25px;
+}
+
+#displayArea {
+    height: 150px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#display {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 500px;
+    background-color: lightcyan;
+    font-size: 48px;
+    padding-right: 16px;
+    align-items: end;
+    justify-content: end;
+}
+
+.previous {
+    font-size: 32px;
+}
+
+.current {
+    font-size: 64px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 550px;
+}
+
+#clearDelete {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 500px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+#numsAndOps{
+    display:flex;
+    flex-wrap: wrap;
+    height: 450px;
+    width: 500px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.numButton {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 50px;
+  width: 50px;
+  margin: 30px;
+}
+
+.numButton {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.35) rotate(-0deg);
+}
+
+.upperButton {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(9, 194, 80, 0.2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 130px;
+  height: 40px;
+}
+
+.upperButton{
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.50) rotate(-0deg);
+}
