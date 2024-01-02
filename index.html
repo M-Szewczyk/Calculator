@@ -10,33 +10,40 @@
     <div id = "calculator">
         <div id = "displayArea"> 
             <div id = "display">
-                <div class = "previous"> 1 </div>
-                <div class = "current"> 2 </div>
+                <div id = "previous"></div>
+                <div id = "current"></div>
             </div>
         </div>
         <div id = "buttons"> 
             <div id = "clearDelete"> 
-                <button id = "ClearButton" class = "upperButton"> CLEAR </button>
-                <button id = "DeleteButton" class = "upperButton"> DELETE </button>
+                <button id = "clearButton" class = "upperButton"> CLEAR </button>
+                <button id = "deleteButton" class = "upperButton"> DELETE </button>
             </div>
             <div id = "numsAndOps"> 
-                <button id = "9button" class = "numButton">7</button>
-                <button id = "8Button" class = "numButton">8</button>
-                <button id = "9Button" class = "numButton">9</button>
-                <button id = "4Button" class = "numButton">4</button>
-                <button id = "5Button" class = "numButton">5</button>
-                <button id = "6Button" class = "numButton">6</button>
-                <button id = "1Button" class = "numButton">1</button>   
-                <button id = "2Button" class = "numButton">2</button>
-                <button id = "3Button" class = "numButton">3</button>
-                <button id = "0Button" class = "numButton">0</button>
-                <button id = "pointButton" class = "numButton">.</button>
-                <button id = "equalsButton" class = "numButton">=</button>
-                <button id = "multiplyButton" class = "numButton">x</button>
-                <button id = "divideButton" class = "numButton">/</button>
-                <button id = "minusButton" class = "numButton">-</button>
-                <button id = "plusButton" class = "numButton">+</button>
-            
+                <div class = "row">
+                    <button class = "btn number">7</button>
+                    <button class = "btn number">8</button>
+                    <button class = "btn number">9</button>
+                    <button class = "btn operator">x</button>
+                </div>
+                <div class = "row">
+                    <button class = "btn number">4</button>
+                    <button class = "btn number">5</button>
+                    <button class = "btn number">6</button>
+                    <button class = "btn operator">/</button>
+                </div>
+                <div class = "row">
+                    <button class = "btn number">1</button>
+                    <button class = "btn number">2</button>
+                    <button class = "btn number">3</button>
+                    <button class = "btn operator">-</button>
+                </div>
+                <div class = "row">
+                    <button class = "btn number">0</button>
+                    <button id = "decimalButton" class = "btn">.</button>
+                    <button id = "equalsButton" class = "btn">=</button>
+                    <button class = "btn operator">+</button>
+                </div>
             </div>
         </div>
     </div>

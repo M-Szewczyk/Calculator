@@ -31,11 +31,11 @@
     justify-content: end;
 }
 
-.previous {
+#previous {
     font-size: 32px;
 }
 
-.current {
+#current {
     font-size: 64px;
 }
 
@@ -58,14 +58,14 @@
 
 #numsAndOps{
     display:flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     height: 450px;
     width: 500px;
     margin-bottom: 30px;
-    margin-left: 30px;
+    margin-left: 22px;
 }
 
-.numButton {
+.btn {
   background-color: #c2fbd7;
   border-radius: 100px;
   box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
@@ -87,7 +87,7 @@
   margin: 30px;
 }
 
-.numButton {
+.btn {
   box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
   transform: scale(1.35) rotate(-0deg);
 }
