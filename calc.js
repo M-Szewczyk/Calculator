@@ -49,7 +49,7 @@ equalsBtn.addEventListener('click', function(){
         else {
             currentScreen.textContent = previousVal.slice(0,5)+ "...";
         }
-        currentVal = 0;
+        currentVal = '';
     }    
 });
 
@@ -73,8 +73,7 @@ function handleOperator(op){
     }
 
     else {
-        console.log(previousVal)
-        console.log(currentVal);
+        console.log(previousVal);
         previousVal = operate();
         operator = op;
         currentVal = '';
@@ -93,16 +92,24 @@ function operate(){
         return;
     }
     if(operator == "+"){
-        previousVal += currentVal;
+        if (currentVal != ''){
+            previousVal += currentVal;
+        }
     }
     if(operator == "-"){
-        previousVal -= currentVal;
+        if (currentVal != ''){
+            previousVal -= currentVal;
+        }
     }
     if(operator == "/"){
-        previousVal /= currentVal;
+        if (currentVal != ''){
+            previousVal /= currentVal;
+        }
     }
     if(operator == "x"){
-        previousVal *= currentVal;
+        if (currentVal != ''){
+            previousVal *= currentVal;
+        }
     }
 
     previousVal = roundNumber(previousVal);
